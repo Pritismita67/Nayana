@@ -30,7 +30,7 @@ document.body.appendChild(renderer.domElement);
 
 // Add HDRI lighting
 const rgbeLoader = new RGBELoader();
-rgbeLoader.load('https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/overcast_soil_puresky_2k.hdr', function (texture) {
+rgbeLoader.load('https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/zwartkops_straight_afternoon_2k.hdr', function (texture) {
     texture.mapping = THREE.EquirectangularReflectionMapping;
     scene.environment = texture;
     scene.background = texture;
@@ -44,7 +44,7 @@ let mixer;
 let clip;
 let action;
 
-loader.load('./src/NAYANAVAT11.glb', function (gltf) {
+loader.load('/NAYANAVAT11.glb', function (gltf) {
     gltfScene = gltf.scene;
     gltfScene.intensity=10
     scene.add(gltfScene);
